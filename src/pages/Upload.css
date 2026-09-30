@@ -1,0 +1,85 @@
+@import "../styles/shared.css";
+
+.dropzone {
+  border: 1.5px dashed var(--line-strong);
+  border-radius: 14px;
+  padding: 34px 28px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  background: rgba(255, 255, 255, 0.015);
+  color: var(--amber);
+}
+
+.dropzone:hover,
+.dropzone.over {
+  border-color: var(--amber-dim);
+  background: rgba(255, 199, 44, 0.05);
+}
+
+.dropzone-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--text-hi);
+}
+
+.dropzone-text strong {
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+.dropzone-text span {
+  font-size: 12.5px;
+  color: var(--text-mid);
+}
+
+.sheet-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+}
+
+.sheet-tabs-label {
+  font-size: 10.5px;
+  color: var(--text-low);
+  letter-spacing: 0.08em;
+  margin-right: 4px;
+}
+
+.sheet-tab {
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  color: var(--text-mid);
+  padding: 7px 13px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.sheet-tab:hover {
+  color: var(--text-hi);
+}
+
+.sheet-tab.active {
+  border-color: var(--amber-dim);
+  color: var(--amber);
+  background: rgba(255, 199, 44, 0.08);
+}
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  color: inherit;
+}
+.icon-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}

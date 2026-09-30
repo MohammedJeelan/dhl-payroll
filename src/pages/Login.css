@@ -1,0 +1,179 @@
+.login-screen {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+}
+
+.login-route {
+  position: absolute;
+  inset: 0;
+  opacity: 0.8;
+  pointer-events: none;
+}
+.login-route svg {
+  width: 100%;
+  height: 100%;
+}
+
+.waybill {
+  position: relative;
+  width: 420px;
+  max-width: 100%;
+  background: linear-gradient(180deg, var(--bg-panel-2), var(--bg-panel));
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+  animation: waybill-in 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes waybill-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.waybill-top {
+  padding: 28px 28px 20px;
+  border-bottom: 1px dashed var(--line-strong);
+  position: relative;
+}
+
+.waybill-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.waybill-mark {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: var(--amber);
+  color: #171008;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 8px;
+  transform: rotate(-4deg);
+}
+
+.waybill-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+}
+
+.waybill-subtitle {
+  font-size: 12.5px;
+  color: var(--text-mid);
+  margin-top: 2px;
+}
+
+.waybill-barcode {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 22px;
+  margin-top: 18px;
+  opacity: 0.55;
+}
+.waybill-barcode span {
+  display: block;
+  height: 100%;
+  background: var(--text-mid);
+}
+
+.waybill-form {
+  padding: 26px 28px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.field label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-low);
+  font-family: var(--font-mono);
+}
+
+.field input {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 13px;
+  font-size: 14.5px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.field input::placeholder {
+  color: var(--text-low);
+}
+
+.field input:focus {
+  border-color: var(--amber-dim);
+  background: rgba(0, 0, 0, 0.35);
+  outline: none;
+}
+
+.waybill-error {
+  background: rgba(255, 90, 95, 0.1);
+  border: 1px solid rgba(255, 90, 95, 0.3);
+  color: #ff9296;
+  font-size: 13px;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.waybill-submit {
+  margin-top: 4px;
+  background: var(--amber);
+  color: #1a1204;
+  border: none;
+  border-radius: 8px;
+  padding: 13px;
+  font-weight: 600;
+  font-size: 14.5px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+  box-shadow: 0 8px 24px -8px rgba(255, 199, 44, 0.5);
+}
+
+.waybill-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px -8px rgba(255, 199, 44, 0.6);
+}
+
+.waybill-submit:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.waybill-foot {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 28px 22px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--text-low);
+}
